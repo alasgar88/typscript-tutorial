@@ -22,7 +22,7 @@ class Department {
 
         // For accesing static properties from none static part use ClassName.method_name | property_name
         //  console.log(Department.fiscalYear);
-        // console.log('Department' + " " + this.name);
+        console.log('Department' + " " + this.name);
     }
 
     // abstract describe(this:Department):void
@@ -34,8 +34,8 @@ class Department {
         console.log(this.employees.length);
         console.log(this.employees);   
     }
-
 }
+
 
 // create employee
 const employee = Department.createEmployee('Max')
@@ -113,20 +113,28 @@ class AccountingDepartment extends Department{
     printReports(){
         console.log(this.reports);
     }
-    addEmployee(name:string){
-        if(name === "Max"){
-            return;
-        }
-        // private properties only accestable inside the class that there are defined .We cant acces them from class that inherites from that class.For this purpose we must use protected instead of private class
-        this.employees.push(name)
-    }
+    // addEmployee(name:string){
+    //     if(name === "Max"){
+    //         return;
+    //     }
+    //     // private properties only accestable inside the class that there are defined .We cant acces them from class that inherites from that class.For this purpose we must use protected instead of private class
+    //     this.employees.push(name)
+    // }
+
+    // re create describe function in AccountingDepartment class
+    // describe(): void {
+    //     console.log("Alasgar");
+           
+    // }
 }
 
 
 // *** Getters & Setters *** //
 
 const accounting10 = new AccountingDepartment('id2',[])
-console.log(accounting10);
+console.log(accounting10,"accounting10");
+console.log(accounting10.describe());
+
 // Get we must run getter method as property
 accounting10.addReport('Something went wrong...')
 accounting10.mostRecentReport

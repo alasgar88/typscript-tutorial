@@ -61,7 +61,6 @@ const copiedPerson = {...person10}
 // const addRest = (...numbers:[number,number,number])=> {}
 const addRest = (...numbers:number[])=> {
     console.log(numbers,"numbers");
-    
 }
 
 addRest(1,2,3,4,5,6)
