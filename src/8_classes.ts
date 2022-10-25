@@ -9,7 +9,7 @@ class Department {
     
     constructor(private readonly id:string, public name:string){
         // this.name = name;
-        // this.id = id;        
+        // this.id = id;   
     }
 
     // static method
@@ -46,7 +46,6 @@ console.log(employee,"employee",Department.fiscalYear,"fiscalYear");
 const accounting = new Department("id1","Accounting")
 
 console.log(accounting,"Accounting+test");
-accounting.describe()
 
 // (this keyword)
 // const accountCopy = {name:"finance",describe : accounting.describe}
@@ -135,6 +134,9 @@ const accounting10 = new AccountingDepartment('id2',[])
 console.log(accounting10,"accounting10");
 console.log(accounting10.describe());
 
+
+// console.log(accounting10.describe(),'accounting10 describe');
+
 // Get we must run getter method as property
 accounting10.addReport('Something went wrong...')
 accounting10.mostRecentReport
@@ -147,7 +149,7 @@ accounting10.mostRecentReport
 // Static method
 // Abstract Classes
 // Private Constructors (Singletons)
-// Singletons patter is about ensuaring  you always have exactly one instance of a certain class.For that we use private constructor
+// Singletons pattern is about ensuaring  you always have exactly one instance of a certain class.For that we use private constructor
 
 class Book {
     private static instance:Book
@@ -168,8 +170,4 @@ class Book {
 
 const bookUniqueInstance = Book.getInstance('Garry Poter',2016,'O')
 console.log(bookUniqueInstance,"bookUniqueInstance");
-
-
-
-
 

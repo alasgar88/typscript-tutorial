@@ -56,6 +56,7 @@ const person10 = {
 const copiedPerson = {...person10}
 
 //  Rest Operator (destructoring/ function parameters while creating/declaration) ** //
+// *** Array & Object destructuring *** //
 
 // example with tuple
 // const addRest = (...numbers:[number,number,number])=> {}
@@ -64,9 +65,5 @@ const addRest = (...numbers:number[])=> {
 }
 
 addRest(1,2,3,4,5,6)
-
-
-// *** Array & Object destructuring *** //
-
 
 
