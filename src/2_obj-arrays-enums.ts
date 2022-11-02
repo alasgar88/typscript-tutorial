@@ -19,13 +19,13 @@ const person:{
     age:number;
     hobbies:string[],
     // i want special array (tuple) with two elements with first number type, second string type element
-    role:[number,string],
+    role:[number,string],// (number | string)][] if we want array instead of tuple
     // role:number
 } = {
     name:"Maximilian",
     age:30,
-    hobbies:['Sports','Cooking'],
-    role:[2,'author'],
+    hobbies:['Sports','Cooking'],                                
+    role:[2,'author'],            
     // role:Role.ADMIN
 };
 

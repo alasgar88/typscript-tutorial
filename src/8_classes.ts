@@ -14,7 +14,7 @@ class Department {
 
     // static method
     static createEmployee(name:string){
-        return {name:name}
+        return {name}
     }
 
     describe(this:Department){
@@ -38,7 +38,7 @@ class Department {
 
 
 // create employee
-const employee = Department.createEmployee('Max')
+const employee = Department.createEmployee('Max');
 console.log(employee,"employee",Department.fiscalYear,"fiscalYear");
 
 
@@ -90,8 +90,7 @@ class AccountingDepartment extends Department{
 
     // getter method has to return something
     get mostRecentReport(){
-        if(this.lastReport){
-            console.log(this.lastReport);  
+        if(this.lastReport){ 
             return this.lastReport
         }
         throw new Error('No report found.')

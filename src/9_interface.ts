@@ -36,7 +36,7 @@ class Person implements Greetable{
         this.age = age
     }
     
-    greet(phrase: string): void {   
+    greet(phrase:string): void {   
         if(this.name){
             console.log(phrase + ' ' + this.name);
         }else{
@@ -62,7 +62,7 @@ user2 = new Person(30,'Alasgar')
 // type AddFn = (a:number,b:number)=>number
 // alternative syntax to custom type above
 interface AddFn {
-    (a:number,b:number):number
+    (a:number,b:number):number;
 }
 
 

@@ -68,8 +68,7 @@ class Truck {
         console.log('Driving a truck');
     }
     loadCargo(amount:number){
-        console.log('Loading cargo...' + amount);
-        
+        console.log('Loading cargo...' + amount);      
     }
 }
 
@@ -99,7 +98,7 @@ useVehicle(v2)
 //  ***  discriminated unions ***  //
 //  This is discriminated union because we have one common property in every object that makes up our union,which describes that object so that we can use this property that describes this object in our check to have 100% type safety and understand which properties are available for such an object and which properties are not
 
-interface Bird{
+interface Bird {
     type:'bird'
     flyingSpeed:number;
 }
@@ -132,30 +131,28 @@ moveAnimal({type:'bird',flyingSpeed:60})
 
 // ** TypeCasting ** //
 
-// const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+// const userInputElement = <HTMLInputElement>document.getElementById('user-input');
 
 // this now tells typescript that the expression in front of  'as HTMLInputElement" will yield a value with type of 'HTMLInputElement'
 
-// const userInputElement = document.getElementById('user-input')! as HTMLInputElement;
+// alternative code
+// const userInputElement = document.getElementById('user-input') as HTMLInputElement;
 
-// alternative for code above
-
-const userInputElement = document.querySelector('user-input');
-
-// If you not sure userInputElement will not return null.by cheking if object exists or not we don't need to use '!'
+// If you not sure userInputElement will not return null.By cheking if object exists or not we don't need to use '!'
+const userInputElement = document.getElementById('user-input')
 if(userInputElement){
     (userInputElement as HTMLInputElement).value = 'Hi there!';
-}
+} 
 
 
 
 // *** Index Properties *** //
 
-interface ErrorContainer{
+interface ErrorContainer {
     // we dont know - which property names we will use and how many properties will we have
     // property name must be string - property value must be string
     id:string;  // id:number will give error
-    [props:string]:string
+    [prop:string]:string
 }
 
 const errorBag:ErrorContainer = {
@@ -206,15 +203,13 @@ const fetchedUserData = {
 
 // *** Nullish Coalescing *** //
 
-const userInput10 = ''; // undefined,''
+const userInput10 = ""; // undefined,''
 
 const storedData = userInput10 || 'DEFAULT'
 console.log(storedData);
 
 // But if you want to keep that user input or whatever data you're working with,unless it really is null or undefined,then you need another approach
 const storedData10 = userInput10 ?? 'DEFAULT'
-console.log(storedData10);
-
-
+console.log(storedData10,"Nullish Coalescing");
 
 
